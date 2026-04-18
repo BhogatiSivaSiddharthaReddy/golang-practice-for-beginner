@@ -547,14 +547,4 @@ v, ok := myMap["k"]
 s, ok := any.(string)
 ```
 
----
 
-## Final Notes to Reach Pro Level
-
-To become truly pro with Go variables:
-- write code daily (small focused snippets)
-- read compile errors carefully (they teach types/scopes fast)
-- run `go vet` and `go run -race`
-- review your code for shadowing and unnecessary global state
-
-If you'd like, next we can create a **practice workbook** with 25 variable-focused problems and solutions.
