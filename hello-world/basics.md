@@ -1,7 +1,5 @@
 # Go Basics: Packages, Modules, Imports, and Core Commands
 
-This repository is a starting point for anyone who wants to learn the Go programming language.
-
 This README summarizes the Go concepts we learned:
 
 - how Go manages dependencies
