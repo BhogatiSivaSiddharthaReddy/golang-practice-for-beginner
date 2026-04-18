@@ -2,6 +2,8 @@
 
 If you understand this file deeply and practice the exercises, you'll have a **strong, practical, pro-level foundation** in Go variables.
 
+
+
 ## Table of Contents
 
 1. [What a Variable Is](#what-a-variable-is)
