@@ -65,3 +65,26 @@ func dec_multiple_variable() {
 // Often used in loops: for _, v := range items { } to ignore index.
 // Go does not allow unused variables, so _ helps discard unwanted values.
 // _ can receive a value, but it cannot be read or printed.
+
+//SCOPE OF VARIALBES
+//------------------
+// Variables declared outside functions are called package-level variables.
+// They can be used by any function in the same package.
+// If the variable name starts with Capital letter, other packages can also use it.
+// If the variable name starts with small letter, it is private to that package.
+
+//EXAMPLES
+//--------
+// Package-level variable examples:
+//
+// var count = 10        // small letter: usable only inside same package
+// var Total = 100      // Capital letter: can be used from other packages
+//
+// func main() {
+//     fmt.Println(count) // allowed in same package
+//     fmt.Println(Total) // allowed in same package
+// }
+//
+// Another package can use:
+// packageName.Total
+// packageName.count   // not allowed
