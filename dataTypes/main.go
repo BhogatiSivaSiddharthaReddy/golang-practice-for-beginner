@@ -10,4 +10,6 @@ func main() {
 	bytes()
 	runes()
 	stringsDemo()
+	floats()
+	complexNumbers()
 }
