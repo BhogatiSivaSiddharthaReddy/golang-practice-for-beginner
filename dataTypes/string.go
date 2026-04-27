@@ -94,7 +94,6 @@ func stringConcatenation() {
 func stringComparison() {
 	fmt.Println("\n**** String Comparison ****")
 
-	fmt.Println("abc == abc:", "abc" == "abc")
 	fmt.Println("abc < abd :", "abc" < "abd")
 }
 
