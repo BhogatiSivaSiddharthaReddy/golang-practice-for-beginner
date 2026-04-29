@@ -170,7 +170,7 @@ func appendWithReturn(s []int) []int {
 
 func sliceParamDemo() {
 	// len=2, cap=2 → append will force reallocation
-	s := make([]int, 2, 2)
+	s := make([]int, 2)
 	s[0], s[1] = 1, 2
 
 	fmt.Println("original:", s)
