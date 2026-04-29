@@ -37,6 +37,7 @@ func access_update_elements() {
 	// Arrays are zero-indexed → a[0] is the first element
 	fmt.Println("1st element in a array:", a[0])
 
+	fmt.Println("slicing:", a[0:2])
 	// Print the memory address of array 'a'
 	// This is the address of the entire array (not individual elements)
 	fmt.Printf("address of a: %p \n", &a)
