@@ -6,6 +6,7 @@ func main() {
 	slicePractice()
 	sliceWTF()
 	sliceParamDemo()
+	sliceOpsAllInOne()
 }
 
 func slicePractice() {
@@ -185,4 +186,44 @@ func sliceParamDemo() {
 	//  Correct append usage
 	s = appendWithReturn(s)
 	fmt.Println("after appendWithReturn:", s)
+}
+
+func sliceOpsAllInOne() {
+	// 🔹 Initial slice
+	s := []int{1, 2, 4, 5}
+
+	fmt.Println("Original slice:", s)
+
+	// -------------------------------
+	// 🔹 INSERT element (value=3 at index=2)
+	// Pattern: append(s[:i], newElement, s[i:]...)
+	// -------------------------------
+
+	index := 2
+	value := 3
+
+	s = append(s[:index], append([]int{value}, s[index:]...)...)
+
+	fmt.Println("After insertion:", s) // [1 2 3 4 5]
+
+	// -------------------------------
+	// 🔹 REVERSE slice (in-place)
+	// Swap from both ends
+	// -------------------------------
+
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
+
+	fmt.Println("After reverse:", s) // [5 4 3 2 1]
+
+	// -------------------------------
+	// 🔹 ITERATE over slice
+	// -------------------------------
+
+	fmt.Println("Iterating over slice:")
+
+	for i, v := range s {
+		fmt.Printf("index=%d value=%d\n", i, v)
+	}
 }
