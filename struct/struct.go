@@ -1,12 +1,15 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
 func main() {
 	fmt.Println("------Learning about structs---------")
 	declaring()
+	struct_tags()
+	access_n_update()
 }
 
 func declaring() {
@@ -66,4 +69,65 @@ func declaring() {
 	// 8. Zero value struct
 	var empty person
 	fmt.Println(empty, "----")
+}
+
+type body struct {
+	Id       int    `json:"id"`
+	Response string `json:"response"`
+}
+
+type req struct {
+	request string
+	body    body
+}
+
+func struct_tags() {
+	P := body{
+		1,
+		"200",
+	}
+	fmt.Println(P, "Before")
+	data, _ := json.Marshal(P)
+
+	fmt.Println(string(data))
+}
+
+func access_n_update() {
+	res := body{
+		2,
+		"403",
+	}
+	//accessing
+	fmt.Println("ID:", res.Id)
+	fmt.Println("Response:", res.Response)
+
+	//Updating
+	res.Id = 3
+	res.Response = "404"
+
+	fmt.Println("updated res:", res)
+
+	//Using Pointer
+
+	r := body{
+		4,
+		"500",
+	}
+
+	p := &r
+
+	p.Id = 5
+	p.Response = "503"
+
+	fmt.Println("printing r", r)
+
+	request := req{
+		request: "https",
+		body: body{
+			6,
+			"100",
+		},
+	}
+
+	fmt.Println("accessing nested struct field", request.body.Response, request.request)
 }
