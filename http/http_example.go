@@ -195,7 +195,8 @@ func (r *router) ServeHTTP(
 }
 
 func main() {
-
+	//serverexample function call
+	server_example()
 	// Interface variable.
 	//
 	// Equivalent to:
@@ -285,4 +286,7 @@ func main() {
 	// Real net/http server eventually
 	// calls ServeHTTP() on router.
 	rout.ServeHTTP(res, req_pointer)
+
+	//serverexample function call
+	server_example()
 }
